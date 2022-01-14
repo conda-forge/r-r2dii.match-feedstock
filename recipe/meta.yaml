@@ -24,7 +24,7 @@ requirements:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
-    - r-base >=3.6.3
+    - r-base 
     - r-data.table
     - r-dplyr >=0.8.5
     - r-glue
@@ -38,7 +38,7 @@ requirements:
     - r-tidyr
     - r-tidyselect
   run:
-    - r-base >=3.6.3
+    - r-base 
     - r-data.table
     - r-dplyr >=0.8.5
     - r-glue
