@@ -15,6 +15,7 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,7 +25,7 @@ requirements:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
-    - r-base 
+    - r-base {{ rbase }} 
     - r-data.table
     - r-dplyr >=0.8.5
     - r-glue
@@ -38,7 +39,7 @@ requirements:
     - r-tidyr
     - r-tidyselect
   run:
-    - r-base 
+    - r-base {{ rbase }}
     - r-data.table
     - r-dplyr >=0.8.5
     - r-glue
