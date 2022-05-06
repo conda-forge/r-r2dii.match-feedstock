@@ -1,4 +1,4 @@
-{% set version = '0.0.11' %}
+{% set version = "0.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/r2dii.match_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/r2dii.match/r2dii.match_{{ version }}.tar.gz
-  sha256: ef3ffde8542657a8570fbb3d608aede9f68321de1b707a3fa51df505a5583c06
+  sha256: 305f2a417b2c91c84d3be5a2e15cf178c9abfc485d67bb77baddcd548ed8643f
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -25,7 +25,7 @@ requirements:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
-    - r-base 
+    - r-base
     - r-data.table
     - r-dplyr >=0.8.5
     - r-glue
@@ -39,7 +39,7 @@ requirements:
     - r-tidyr
     - r-tidyselect
   run:
-    - r-base 
+    - r-base
     - r-data.table
     - r-dplyr >=0.8.5
     - r-glue
@@ -61,17 +61,12 @@ test:
 about:
   home: https://2degreesinvesting.github.io/r2dii.match/, https://github.com/2DegreesInvesting/r2dii.match
   license: MIT
-  summary: These tools implement in R a fundamental part of the software 'PACTA' (Paris Agreement
-    Capital Transition Assessment), which is a free tool that calculates the alignment
-    between financial portfolios and climate scenarios (<https://2degrees-investing.org/>).
-    Financial institutions use 'PACTA' to study how their capital allocation decisions
-    align with climate change mitigation goals. This package matches data from corporate
-    lending portfolios to asset level data from market-intelligence databases (e.g.
-    power plant capacities, emission factors, etc.). This is the first step to assess
-    if a financial portfolio aligns with climate goals.
+  summary: These tools implement in R a fundamental part of the software 'PACTA' (Paris Agreement Capital Transition Assessment), which is a free tool that calculates the alignment between financial portfolios and climate scenarios (<https://2degrees-investing.org/>). Financial institutions use 'PACTA' to study how their
+    capital allocation decisions align with climate change mitigation goals. This package matches data from corporate lending portfolios to asset level data from market-intelligence databases (e.g. power plant capacities, emission factors, etc.). This is the first step to assess if a financial portfolio aligns with climate
+    goals.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
