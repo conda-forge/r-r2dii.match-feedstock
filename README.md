@@ -1,11 +1,11 @@
-About r-r2dii.match
-===================
+About r-r2dii.match-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-r2dii.match-feedstock/blob/main/LICENSE.txt)
 
 Home: https://2degreesinvesting.github.io/r2dii.match/, https://github.com/2DegreesInvesting/r2dii.match
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-r2dii.match-feedstock/blob/main/LICENSE.txt)
 
 Summary: These tools implement in R a fundamental part of the software 'PACTA' (Paris Agreement Capital Transition Assessment), which is a free tool that calculates the alignment between financial portfolios and climate scenarios (<https://2degrees-investing.org/>). Financial institutions use 'PACTA' to study how their capital allocation decisions align with climate change mitigation goals. This package matches data from corporate lending portfolios to asset level data from market-intelligence databases (e.g. power plant capacities, emission factors, etc.). This is the first step to assess if a financial portfolio aligns with climate goals.
 
