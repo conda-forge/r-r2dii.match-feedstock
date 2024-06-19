@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/r2dii.match_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/r2dii.match/r2dii.match_{{ version }}.tar.gz
-  sha256: 1678ee5e08593093796d7648b2869d8d21a5bc235f9dcae98d8e28d8885d078a
+  sha256: bf47f3ed6572060d6e422f7821735ecb90a8ae3e55bd8096843e1474812b59b8
 
 build:
   merge_build_host: true  # [win]
